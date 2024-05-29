@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .visual{
+    background-image: url(images/bg.png);
+    z-index: -1;
+}
+
+.visual  .inner {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    height: 600px;
+}
+
+.visual .title {
+    position: absolute;
+    top: 88px;
+    left: 200px;    
+}
+
+.visual .u {
+    position: absolute;
+    bottom: 180px;
+    right: 50px;
+}
+
+.visual .unbelievable{
+    position: absolute;
+    bottom: 50px;
+    right: 162px;
+}
+
+.visual .can{
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+}
+
+.visual_2{
+    background-image: url(images/bg_2.png);
+    z-index: -1;
+}
+
+.visual_2  .inner_2 {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    height: 600px;
+}
+
+.visual_2 .title {
+    position: absolute;
+    top: 88px;
+    left: 200px;    
+}
+
+.visual_2 .u_2 {
+    position: absolute;
+    bottom: 180px;
+    right: 50px;
+}
+
+.visual_2 .unbelievable_2{
+    position: absolute;
+    bottom: 50px;
+    right: 162px;
+}
+
+.visual_2 .can_2{
+    position: absolute;
+    bottom: 50px;
+    left: 120px;
+}
+
+    </style>
+</head>
+<body>
+    <section class="visual">
+        <div class="inner">
+            <div class="title fade-in">
+                <img src="images/paper.png" alt="">
+            </div>
+
+            <div class="u fade-in">
+                <img src="images/u.png" alt="" class="u image">
+            </div>
+
+            <div class="unbelievable fade-in">
+                <img src="images/unbelievable.png" alt="" class="cup2 image">
+            </div>
+
+            <div class="can fade-in">
+                <img src="images/can.png" alt="" class="spoon">
+            </div>
+        </div>
+
+
+        <section class="visual_2">
+            <div class="inner_2">
+                <div class="title fade-in">
+                    <img src="images/paper_2.png" alt="">
+                </div>
+    
+                <div class="u fade-in">
+                    <img src="images/u_2.png" alt="" class="u image">
+                </div>
+    
+                <div class="unbelievable fade-in">
+                    <img src="images/unbelievable_2.png" alt="" class="unbelievable image">
+                </div>
+    
+                <div class="can fade-in">
+                    <img src="images/can_2.png" alt="" class="can image">
+                </div>
+            </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        const fadeEls = document.querySelectorAll('.visual .fade-in')
+        gsap.from(fadeEls, {
+            duration: 1,
+            scale: .3,
+            ease: "bounce(12)",
+            opacity: 0,
+            stagger: 0.7
+        })
+    </script>
+</body>
+</html>
